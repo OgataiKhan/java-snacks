@@ -9,26 +9,28 @@ public class Snack5 {
 
         String userString;
 
-        System.out.print("Enter a string: ");
-        userString = scanner.nextLine();
+        do {
+            System.out.print("Enter a string: ");
+            userString = scanner.nextLine();
 
-        int lettersCount = 0;
-        int digitsCount = 0;
-        int symbolsCount = 0;
+            int lettersCount = 0;
+            int digitsCount = 0;
+            int symbolsCount = 0;
 
-        for (int i = 0; i < userString.length(); i++) {
-            if (Character.isLetter(userString.charAt(i))){
-                lettersCount++;
-            } else if (Character.isDigit(userString.charAt(i))) {
-                digitsCount++;
-            } else {
-                symbolsCount++;
+            for (int i = 0; i < userString.length(); i++) {
+                if (Character.isLetter(userString.charAt(i))) {
+                    lettersCount++;
+                } else if (Character.isDigit(userString.charAt(i))) {
+                    digitsCount++;
+                } else {
+                    symbolsCount++;
+                }
             }
-        }
 
-        System.out.println("Letters: " + lettersCount);
-        System.out.println("Digits: " + digitsCount);
-        System.out.println("Symbols: " + symbolsCount);
+            System.out.println("Letters: " + lettersCount);
+            System.out.println("Digits: " + digitsCount);
+            System.out.println("Symbols: " + symbolsCount);
+        } while (!userString.equals("0"));
 
         // Close Scanner
         scanner.close();

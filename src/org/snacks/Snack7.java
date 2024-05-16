@@ -18,7 +18,7 @@ public class Snack7 {
         minutes = totalSeconds % 3600 / 60;
         seconds = totalSeconds % 60;
 
-        System.out.println(String.format("%02d", hours) + ":" + String.format("%02d", minutes) + ":" + String.format("%02d", seconds));
+        System.out.println("Time: " + String.format("%02d", hours) + ":" + String.format("%02d", minutes) + ":" + String.format("%02d", seconds));
 
         // Close Scanner
         scanner.close();
