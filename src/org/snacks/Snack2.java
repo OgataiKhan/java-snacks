@@ -35,11 +35,11 @@ public class Snack2 {
         Random rand = new Random();
 
         int firstNameIndex, lastNameIndex;
-        String[] fullNames = new String[10];
+        String[] fullNames = new String[firstNames.length];
 
         for (int i = 0; i < fullNames.length; i++) {
-            firstNameIndex = rand.nextInt(10);
-            lastNameIndex = rand.nextInt(10);
+            firstNameIndex = rand.nextInt(fullNames.length);
+            lastNameIndex = rand.nextInt(fullNames.length);
             fullNames[i] = firstNames[firstNameIndex] + " " + lastNames[lastNameIndex];
         }
 
